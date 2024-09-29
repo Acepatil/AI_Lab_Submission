@@ -40,7 +40,7 @@ def make_move(state, move):
 
 def bfs(initial_state):
     """Solve the Rabbit Leap problem using a simple backtracking approach."""
-    stack = deque[(initial_state, [])]  # (current state, path of moves)
+    stack = deque([(initial_state, [])])  # (current state, path of moves)
     visited = set()
 
     while stack:
