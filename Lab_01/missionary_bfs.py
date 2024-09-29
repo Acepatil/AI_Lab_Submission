@@ -29,7 +29,7 @@ def get_successors(node):
                 successors.append(successor) 
     return successors
 
-def dfs(start_state, goal_state):
+def bfs(start_state, goal_state):
     start_node = Node(start_state)
     goal_node = Node(goal_state)
     queue = deque([start_node])
@@ -56,7 +56,7 @@ start_state = [1, 1, 1, 0, -1, -1, -1]
 goal_state = [-1, -1, -1, 0, 1, 1, 1]
 s_node = Node(start_state)
 
-solution,explored = dfs(start_state, goal_state)
+solution,explored = bfs(start_state, goal_state)
 if solution:
     for step in solution:
         print(step)
