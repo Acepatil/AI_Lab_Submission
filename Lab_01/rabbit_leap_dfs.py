@@ -37,7 +37,7 @@ def make_move(state, move):
     return new_state
 
 
-def bfs(initial_state):
+def dfs(initial_state):
     """Solve the Rabbit Leap problem using a simple backtracking approach."""
     stack = [(initial_state, [])]  # (current state, path of moves)
     visited = set()
@@ -67,7 +67,7 @@ def bfs(initial_state):
 
 # Initial state: 1, 1, 1 (East-bound rabbits), -1 (Empty), 0, 0, 0 (West-bound rabbits)
 initial_state = [1, 1, 1, -1, 0, 0, 0]
-path = bfs(initial_state)
+path = dfs(initial_state)
 
 if path:
     print("Solution Found:")
